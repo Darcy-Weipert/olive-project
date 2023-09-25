@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olives</title>
+    <style>
+      h1,
+      h2 {
+        text-align: center;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      h1 {
+        color: rgb(20, 126, 20);
+        font-size: 34px;
+        line-height: 48px;
+        margin: 0;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 34px;
+        line-height: 48px;
+        font-weight: 400;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      p {
+        text-align: center;
+        display: block;
+        line-height: 30px;
+        font-weight: 25px;
+        margin: 30px 500px;
+        border-radius: 30px;
+      }
+      a {
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: rgb(20, 126, 20);
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid rgb(20, 126, 20);
+        background: rgb(20, 126, 20);
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+        transition: all 200ms ease;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        cursor: pointer;
+      }
+      button:hover {
+        background: white;
+        color: rgb(20, 126, 20);
+        border: 1px solid rgb(20, 126, 20);
+      }
+      .footer {
+        text-align: center;
+        font-weight: 6px;
+      }
+      background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Olives are very<br /><em>delicious!</em></h1>
+      <h2>With <strong>so</strong> many health benefits</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/090/888/original/olive.jpg?1690046780"
+      />
+      <p>
+        <span>Olives</span> are very high in vitamin E and other powerful
+        antioxidants. Studies show that they are good for the heart and may
+        protect against osteoporosis and cancer. The healthy fats in olives are
+        extracted to produce olive oil, one of the key components of the
+        incredibly healthy Mediterranean diet.
+      </p>
+
+      <a
+        href="https://www.healthline.com/nutrition/foods/olives"
+        class="learn-more"
+        target="_blank"
+      >
+        Learn More on Healthline.com</a
+      >
+
+      <button class="buy-button">Shop Now</button>
+      <p class="footer">This page was built by Darcy Weipert</p>
+    </div>
+    <script>
+      function shopNow() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        if (name === "") {
+          alert("I'm sorry, we cannot find any shops 😞");
+        } else {
+          alert(
+            "Thank you " +
+              name +
+              ", We will email you a list of shops nearby 😃"
+          );
+        }
+      }
+      let buyButton = document.querySelector("button");
+      buyButton.addEventListener("click", shopNow);
+    </script>
+  </body>
+</html>
